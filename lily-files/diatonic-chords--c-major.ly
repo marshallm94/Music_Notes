@@ -29,7 +29,6 @@ c_major_diatonic_chords_lower = {
   \relative c {
     % I - C Major
     <c e g>4_\markup { "I" } <e g c>4_\markup { \concat { "I" \hspace #0.25 \raise #1.8 \fontsize #-4 "6" } } <g c e>4_\markup { \concat { "I" \hspace #0.25 \raise #1.8 \fontsize #-4 "6" \hspace #-0.7 \raise #0.5 \fontsize #-4 "4" } }
-
   }
   \relative c {
     % ii - D minor
@@ -46,7 +45,6 @@ c_major_diatonic_chords_lower = {
   \relative c {
     % V - G Major
     <g b d>4_\markup { "V" } <b d g>4_\markup { \concat { "V" \hspace #0.25 \raise #1.8 \fontsize #-4 "6" } } <d g b>4_\markup { \concat { "V" \hspace #0.25 \raise #1.8 \fontsize #-4 "6" \hspace #-0.7 \raise #0.5 \fontsize #-4 "4" } }
-
   }
   \relative c {
     % vi - A minor
@@ -57,7 +55,6 @@ c_major_diatonic_chords_lower = {
     <b d f>4_\markup { "vii°" } <d f b>4_\markup { \concat { "vii°" \hspace #0.25 \raise #1.8 \fontsize #-4 "6" } } <f b d>4_\markup { \concat { "vii°" \hspace #0.25 \raise #1.8 \fontsize #-4 "6" \hspace #-0.7 \raise #0.5 \fontsize #-4 "4" } }
   }
 }
-
 
 \score {
   \new PianoStaff

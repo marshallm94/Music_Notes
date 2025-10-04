@@ -1,5 +1,15 @@
 \version "2.24.4"
 
+c_major_chord_names = \chordmode {
+  c4 c4:/e c4:/g
+  d4:m d4:m/f d4:m/a
+  e4:m e4:m/g e4:m/b
+  f4 f4:/a f4:/c
+  g4 g4:/b g4:/d
+  a4:m a4:m/c a4:m/e
+  b4:dim b4:dim/d b4:dim/f
+}
+
 c_major_diatonic_chords_upper = {
   \clef treble
   \key c \major
@@ -57,19 +67,26 @@ c_major_diatonic_chords_lower = {
 }
 
 \score {
-  \new PianoStaff
   <<
-    \new Staff \c_major_diatonic_chords_upper
-    \new Staff \c_major_diatonic_chords_lower
+    \new ChordNames \c_major_chord_names
+    \new PianoStaff <<
+      \new Staff \c_major_diatonic_chords_upper
+      \new Staff \c_major_diatonic_chords_lower
+    >>
   >>
+
   \layout { 
+    indent = #0
+    ragged-last = ##f
+    \context {
+      \ChordNames
+      \override ChordName.font-size = #-3
+    }
     \context {
       \Staff
       \remove "Bar_engraver"
       \override TextScript.Y-offset = #-7.5
       \override TextScript.font-size = #-0.5
     }
-    indent = #0
-    ragged-last = ##f
   }
 }
